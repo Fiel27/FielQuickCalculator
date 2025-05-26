@@ -62,6 +62,19 @@
       document.getElementById("output").textContent = "Hello, " + name + "!";
     }
   </script>
+
+  <h2>Move the slider:</h2>
+  <input type="range" id="slider" min="0" max="100" oninput="updateValue(this.value)">
+  <p>Value: <span id="valueText">50</span></p>
+
+  <script>
+    function updateValue(val) {
+      document.getElementById("valueText").textContent = val;
+    }
+
+    // Optional: Set default display on load
+    document.getElementById("slider").value = 50;
+  </script>
     
 </body>
 </html>
